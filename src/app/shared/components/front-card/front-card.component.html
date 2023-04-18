@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>
+                {{movieCard.title}}
+            </h1>
+        </div>
+        <div class="col-md-8">
+            <h6>
+                <span class="font-weigth-bold"> IMDB Rating :</span>{{movieCard.vote_average}}
+            </h6>
+            <h6>
+                <span class="font-weigth-bold">Popularity:</span> {{movieCard.popularity}}
+            </h6>
+            <h6>
+                <span class="font-weigth-bold">Movie Vote Count :</span> {{movieCard.vote_count}}
+            </h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <figure>
+                <img class="img-fluid mr-4" src="{{movieImg}}{{movieCard.backdrop_path}}" alt="">
+            </figure>
+        </div>
+        <div class="col-md-2">
+            <h5>
+                <span class="font-weight-bold">
+                    Movie Overview:
+                </span>
+                {{movieCard.overview}}
+            </h5>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<!-- <div class="row">
+    <div class="col-sm-3 mt-4 " *ngFor="let movie of movieArray">
+        <figure class="figure">
+            <img src="{{imgPath}}{{movie.poster_path}}" class="figure-img img-fluid rounded" alt="movieImg">
+            <figcaption class="figure-caption">{{movie.title}}</figcaption>
+        </figure>
+    </div>
+</div> -->
+
+
+
+<div class="row">
+    <div class="col-sm-3 mt-4 " *ngFor="let movie of movieArray | movieArray : searchBar">
+        <app-movie-card [movieCard]="movie" (onSearchEmiter)="searchBar"></app-movie-card>
+    </div>
+</div>
